@@ -1,0 +1,92 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: auto;
+    color: white;
+    opacity: 70%;
+    box-shadow: 20px 20px black;   
+}
+th {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    
+}
+td{
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+}
+th {
+    background-color: silver;
+    opacity: 70%;
+    
+}
+body {
+    text-align: center; /* Centering all content */
+    font-family: Helvetica;
+    color: white;
+    background-image: url('/cs232Project/backgroundimage5edited.png');
+    background-size: cover;     
+    backdrop-filter: blur(2px); 
+}
+table:hover {opacity: 9%;}
+
+.button {
+    
+  
+    color: rgb(163, 50, 50);
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    
+    border-radius: 5px;
+    margin-top: 20px; /* Add margin at the top */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+.button:hover {
+    background-color: #6b5329;
+}
+
+.booking-form {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur the background */
+    width: 500px;
+    
+}
+
+.booking-form label {
+    color: white;
+    margin-right: 10px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="number"] {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+.booking-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #6b5329;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #4a361e;
+}

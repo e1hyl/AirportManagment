@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('/cs232Project/backgroundimage6edited.jpg');
+    background-size: 2000px;
+}
+.container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px;
+    opacity: 75%;
+    border: 3px solid rgb(18, 12, 12);
+    
+}
+h2{
+    text-align: center;
+}
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    
+    margin: 6px 0;
+    border: 1px solid hsl(254, 60%, 48%);
+    border-radius: 4px;
+    box-sizing: border-box;
+         
+}
+input[type="submit"] {
+    background-color: #142970;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #16032a;
+}
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.button {
+    color: #fffeff3f;
+    padding: 5px ;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px; /* Add margin at the top */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    margin-left: 730px;
+    background-color: #142970;
+}
+
+/* Adjust the margin-top to move the button further down */
+.button {
+    margin-top: 10px; /* Adjust the value as needed */
+}
+
+.button:hover{
+    background-color:#16032a;
+    opacity: 60%;
+     
+}
