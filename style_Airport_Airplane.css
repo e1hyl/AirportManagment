@@ -32,10 +32,9 @@ body {
     background-size: cover;     
     backdrop-filter: blur(2px); 
 }
-table:hover {opacity: 9%;}
+table:hover {opacity: 90%;}
 
 .button {
-    
   
     color: rgb(163, 50, 50);
     padding: 10px 10px;
