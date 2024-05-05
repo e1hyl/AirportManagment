@@ -38,21 +38,20 @@
             <select id="airportSelect">
                 <option value="">-</option>
                 <?php
-                // Database connection parameters
+              
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
-                $dbname = "airport_managment"; // Replace with your database name
+                $dbname = "airport_managment";
 
-                // Create connection
+                
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // SQL query to retrieve airport names and locations
+                
                 $sql = "SELECT air_name, location FROM airport";
 
                 // Execute the query
@@ -68,7 +67,6 @@
                     echo "<option value=''>No airports found</option>";
                 }
 
-                // Close the database connection
                 $conn->close();
                 ?>
             </select>
@@ -80,23 +78,23 @@
             <select id="airlineSelect">
                 <option value="">-</option>
                 <?php
-                // Re-establish database connection for fetching airlines
+                // Re-establishing database connection 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // Check connection
+                
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // SQL query to retrieve airline names from cooperation table
+                
                 $sql_airlines = "SELECT DISTINCT CoName, phone FROM cooperation";
 
-                // Execute the query
+                
                 $result_airlines = $conn->query($sql_airlines);
 
-                // Check if there are rows returned
+                
                 if ($result_airlines->num_rows > 0) {
-                    // Output data of each row
+                    
                     while ($row_airline = $result_airlines->fetch_assoc()) {
                         echo "<option value='" . $row_airline['CoName'] . "'>" . $row_airline['CoName'] . " - " . $row_airline['phone'] . "</option>";
                     }
@@ -116,7 +114,7 @@
     
 
 <script>
-    // Function to open admin login page
+    
     function openAdminLoginPage() {
         window.location = "adminstrater_login.php";
     }
@@ -126,7 +124,7 @@
         
         if (selectedAirline) {
             window.location = "airplane.php?airline=" + encodeURIComponent(selectedAirline);
-            // Perform further actions here based on the selected value
+            
         } else {
             alert("Please select an airline.");
         }
@@ -137,7 +135,7 @@
         
         if (selectedAirport) {
             window.location = "airport.php?airport=" + encodeURIComponent(selectedAirport);
-            // Perform further actions here based on the selected value
+            
         } else {
             alert("Please select an airport.");
         }

@@ -1,12 +1,10 @@
-/* main.css */
 
-/* Reset default margin and padding */
 body, html {
     margin: 0;
     padding: 0;
 }
 
-/* Global container styles */
+
 .container {
     max-width: 450px;
     margin: auto;

@@ -16,10 +16,11 @@
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Login">
         </form>
+        
         <?php
 // Check if form is submitted and username and password are not empty
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['username']) && !empty($_POST['password'])) {
-    // Database connection
+    
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -35,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['username']) && !empty
     $entered_username = $_POST['username'];
     $entered_password = $_POST['password'];
 
-    // Fetch username and password from database
     $sql = "SELECT * FROM adminlogin WHERE username='$entered_username'";
     $result = $conn->query($sql);
 
@@ -43,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['username']) && !empty
         $row = $result->fetch_assoc();
         if ($entered_password != $row['passwordd']) {
             echo "<p class='error'>Incorrect password. Please try again.</p>";
-            // Redirect to admin_Edits.php if login successful
             
             exit;
         } else {

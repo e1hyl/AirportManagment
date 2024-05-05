@@ -85,7 +85,7 @@
         <label for="airport">Select Destination:</label>
         <select name="airport" id="airport">
             <?php
-            // Assuming you have a connection established already
+            
             $sql_destination = "SELECT f.destination 
                                     FROM flight f
                                     LEFT JOIN airport a ON f.airName = a.air_Name
@@ -122,7 +122,6 @@
                 $passenger_name = $_GET['passanger_name'];
                 $passenger_age = $_GET['passanger_age'];
                 
-                // Prepare and execute SQL statement to insert passenger data into the database
                 $sql_insert_passenger = "INSERT INTO passangers (passanger_name, passanger_age, destination) VALUES (?, ?, ?)";
                 $stmt = $conn->prepare($sql_insert_passenger);
                 $stmt->bind_param("sis", $passenger_name, $passenger_age, $selectedAirport);

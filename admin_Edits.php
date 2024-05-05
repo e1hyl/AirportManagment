@@ -20,20 +20,20 @@
 </div>
 
 <?php
-// Connect to the database (you'll need to provide your own credentials)
+
 $db = new mysqli("localhost", "root", "", "airport_managment");
 
 if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 }
 
-// Handle form submission
+// Handling form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $air_name = $_POST["air_name"];
     $location = $_POST["location"];
     $terminals = $_POST["terminals"];
 
-    // Check if the airport name already exists
+    
     $check_query = "SELECT * FROM airport WHERE air_name = '$air_name'";
     $result = $db->query($check_query);
 
@@ -41,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "<script>alert('Airport name already exists. Please choose a different name.');</script>";
     }
 
-    // Insert data into the airport table
     $insert_query = "INSERT INTO airport (air_name, location, terminals) VALUES ('$air_name', '$location', $terminals)";
     if ($db->query($insert_query) === TRUE) {
         echo "<script>alert('Airport added successfully!');</script>";

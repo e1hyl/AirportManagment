@@ -52,15 +52,15 @@ input[type="submit"]:hover {
     display: inline-block;
     font-size: 14px;
     border-radius: 5px;
-    margin-top: 10px; /* Add margin at the top */
-    margin-bottom: 20px; /* Add margin at the bottom */
+    margin-top: 10px; 
+    margin-bottom: 20px; 
     margin-left: 730px;
     background-color: #142970;
 }
 
 /* Adjust the margin-top to move the button further down */
 .button {
-    margin-top: 10px; /* Adjust the value as needed */
+    margin-top: 10px; 
 }
 
 .button:hover{
